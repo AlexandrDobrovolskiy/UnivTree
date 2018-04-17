@@ -1,0 +1,11 @@
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\bin\Debug\netcoreapp2.0\UnivTree.deps.json
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\bin\Debug\netcoreapp2.0\UnivTree.runtimeconfig.json
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\bin\Debug\netcoreapp2.0\UnivTree.runtimeconfig.dev.json
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\bin\Debug\netcoreapp2.0\UnivTree.dll
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\bin\Debug\netcoreapp2.0\UnivTree.pdb
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\obj\Debug\netcoreapp2.0\UnivTree.csprojResolveAssemblyReference.cache
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\obj\Debug\netcoreapp2.0\UnivTree.csproj.CoreCompileInputs.cache
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\obj\Debug\netcoreapp2.0\UnivTree.AssemblyInfoInputs.cache
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\obj\Debug\netcoreapp2.0\UnivTree.AssemblyInfo.cs
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\obj\Debug\netcoreapp2.0\UnivTree.dll
+C:\Users\Alexandr\Source\Repos\UnivTree\UnivTree\obj\Debug\netcoreapp2.0\UnivTree.pdb

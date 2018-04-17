@@ -4,30 +4,74 @@ using System.Text;
 
 namespace UnivTree
 {
-    abstract class Node //вершина
+    abstract class Node 
     {
-        protected List<Node> childNodes;
-        protected Node parentNode;
+        protected string Description;
+        protected List<Node> ChildNodes = new List<Node>();
+        protected Node ParentNode;
+        protected static int indent = 0;
 
-        public Node GetParent() //батьківська вершина
+        public int ChildCount { get; set; }
+
+        public string NodeType => Description;
+        public Node GetParent() => ParentNode;
+
+        public string GetIndent()
         {
-            return null;
+            string res = String.Empty;
+            Node parent = this.GetParent();
+            while (parent != null)
+            {
+                res += '\t';
+                parent = parent.GetParent();
+            }
+
+            return res;
         }
 
-        public Node AddChild(Node child)  // додає сина
+        public string GetPropertyJson(string name, Object prop, bool isLast = false)
         {
-            return null;
+            string propJSON = $"{this.GetIndent()}\"{name}\" : \"{prop}\"";
+            propJSON += isLast ? String.Empty : ",";
+
+            return propJSON;
         }
 
-        public void RemoveChild(int i)  // вилучає сина та всіх його синів
+        public void PrintChildsJson()
         {
+            Console.Write($"{GetIndent()}\"ChildNodes\" : ");
+            if (ChildNodes.Count > 0)
+            {
 
+                Console.Write($"{ChildNodes[0].GetIndent()}\n{GetIndent()}[\n");
+                for (int i = 0; i < ChildNodes.Count; i++)
+                {
+                    ChildNodes[i].Print();
+                    if (i != ChildCount - 1)
+                        Console.Write(",");
+                    Console.Write("\n");
+                }
+                Console.Write($"{ChildNodes[0].GetIndent()}\n{GetIndent()}]\n");
+            }
+            else
+            {
+                Console.Write("[]\n");
+            }
         }
 
-        public int ChildCount { get { return 0; } }  // кількість синів
+        public Node AddChild(Node child)
+        {
+            child.ParentNode = this;
+            ChildCount++;
+            ChildNodes.Add(child);
+            return this;
+        }
 
-        public string NodeType { get { return null; } } //тип вузла
+        public void RemoveChild(int i) 
+        {
+            ChildNodes.RemoveAt(i);
+        }
 
-        public abstract void Print();  // виводить вузел та піддерево на консоль в JSON форматі 
+        public abstract void Print();
     }
 }

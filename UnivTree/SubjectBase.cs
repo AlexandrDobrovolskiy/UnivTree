@@ -6,14 +6,18 @@ namespace UnivTree
 {
     abstract class SubjectBase : Node  //самостійно не використовується   
     {
-        public SubjectBase(string name)
+        string SubjectName { get; set; }
+        protected SubjectBase(string name)
         {
-
+            this.SubjectName = name;
         }
 
-        string SubjectName { get; set; }
         public override void Print()
         {
+            Console.Write(GetIndent() + "{\n" +
+                          $"{GetPropertyJson("NodeType", Description)} \n" +
+                          $"{GetPropertyJson("Name", SubjectName)} \n" +
+                          $"{GetPropertyJson("ChildCount", ChildCount)} \n");
 
         }
 
